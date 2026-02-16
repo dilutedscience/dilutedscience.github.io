@@ -3,126 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBD Mix Studio Lights</title>
+  <title>BBD Mix Studio Vibes</title>
   <style>
-    body, html {
+    * {
       margin: 0;
       padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: 'Arial', sans-serif;
-      background: #000;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
+      background: #000;
+      line-height: 1.6;
     }
-    
-    .container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    
+
+    /* Full-screen background with lights & mixer */
     .background {
-      position: absolute;
-      top: 0; left: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      filter: brightness(0.7) contrast(1.1);
-      z-index: 1;
+      background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') no-repeat center center;
+      background-size: cover;
+      filter: brightness(0.7); /* slightly darken so text is readable */
+      z-index: -2;
     }
-    
+
+    /* Optional overlay for more "nightclub lights" feel */
     .overlay {
-      position: absolute;
-      top: 0; left: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(100,0,200,0.3), rgba(0,0,0,0.6));
-      z-index: 2;
+      z-index: -1;
+      pointer-events: none;
     }
-    
-    .content {
-      position: relative;
-      z-index: 3;
+
+    header {
       text-align: center;
-      padding: 20px;
-      max-width: 90%;
+      padding: 120px 20px 80px;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(8px);
     }
-    
+
     h1 {
       font-size: 4.5rem;
-      margin: 0.2em 0;
       text-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
-      letter-spacing: 4px;
-      animation: glow 3s infinite alternate;
+      margin-bottom: 0.3em;
     }
-    
-    p {
+
+    .subtitle {
       font-size: 1.6rem;
-      margin: 0.5em 0;
-      text-shadow: 0 0 10px #fff;
+      opacity: 0.9;
     }
-    
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
-    
-    .gallery img {
-      width: 380px;
-      height: auto;
+
+    section {
+      background: rgba(20, 20, 40, 0.75);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 50px 40px;
+      margin: 60px 0;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+    }
+
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 1em;
+      color: #ffcc00;
+      text-shadow: 0 0 15px #ffcc00;
+    }
+
+    p, li {
+      font-size: 1.3rem;
+      margin-bottom: 1.2em;
+    }
+
+    .mixer-image {
+      width: 100%;
+      max-width: 800px;
       border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(255, 0, 255, 0.4);
-      transition: transform 0.4s, box-shadow 0.4s;
+      margin: 30px auto;
+      display: block;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
     }
-    
-    .gallery img:hover {
-      transform: scale(1.08);
-      box-shadow: 0 0 50px rgba(0, 255, 255, 0.9), 0 0 100px rgba(255, 0, 255, 0.7);
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 1.1rem;
+      opacity: 0.8;
     }
-    
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff; }
-      to   { text-shadow: 0 0 30px #ff00ff, 0 0 60px #00ffff, 0 0 90px #ff00ff; }
-    }
-    
-    @media (max-width: 900px) {
-      h1 { font-size: 3.2rem; }
-      .gallery img { width: 320px; }
+
+    /* Makes it feel more scrollable / long */
+    .extra-height {
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      text-align: center;
     }
   </style>
 </head>
 <body>
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <header>
+    <h1>BBD MIX</h1>
+    <p class="subtitle">Late Night Studio Vibes • Lights On • Drop It</p>
+  </header>
+
   <div class="container">
-    <img src="https://thumbs.dreamstime.com/b/dj-equipment-setup-stage-vibrant-lighting-entertainment-music-438179330.jpg" 
-         alt="Vibrant DJ setup with colorful stage lights" class="background">
-    
-    <div class="overlay"></div>
-    
-    <div class="content">
-      <h1>BBD MIX</h1>
-      <p>Studio Session • Lights On • Pure Energy</p>
+
+    <section>
+      <h2>The Mix</h2>
+      <p>Welcome to the zone. Deep basslines, glowing faders, and lights pulsing to the beat. This is where the magic happens.</p>
       
-      <div class="gallery">
-        <img src="BBD mix.jpg" 
-             alt="Neon DJ mixer with glowing colorful lights">
-        
-        <img src="studio.jpg" 
-             alt="Futuristic neon DJ studio with vibrant lights">
-        
-        <img src="lights.jpg" 
-             alt="DJ controller with glowing waveform and lights">
-        
-        <img src="https://thumbs.dreamstime.com/b/mixer-section-dj-controller-dark-dj-room-downtown-party-mixer-section-dj-controller-dark-dj-room-downtown-party-181115380.jpg" 
-             alt="Close-up DJ mixer with purple, blue, and red illuminated controls">
-      </div>
-    </div>
+      <img 
+        src="BBD mix.jpg" 
+        alt="Lit-up DJ mixer with colorful studio lights" 
+        class="mixer-image"
+      >
+      
+      <p>Replace the image src above with your own BBD mix photo if you have a specific one!</p>
+    </section>
+
+    <section>
+      <h2>Tracklist Highlights</h2>
+      <ul>
+        <li>01. Intro – Neon Pulse</li>
+        <li>02. Bass Overload</li>
+        <li>03. Midnight Lights</li>
+        <li>04. Drop Zone</li>
+        <li>05. Echoes in the Booth</li>
+        <li>06. Sunrise Fade</li>
+      </ul>
+      <p>Turn it up. Feel the lights sync to the rhythm.</p>
+    </section>
+
+    <section class="extra-height">
+      <p>Scroll more... the beat keeps going ↓</p>
+    </section>
+
+    <section>
+      <h2>Studio Gear Spotlight</h2>
+      <p>CDJs, mixer glowing with RGB, fog rolling in, and the crowd losing it. Pure energy.</p>
+      
+      <img 
+        src="studio.jpg" 
+        alt="Nightclub DJ booth with colorful stage lights" 
+        class="mixer-image"
+      >
+    </section>
+
   </div>
+
+  <footer>
+    <p>Created for the vibes • © 2026 BBD Mix Studio</p>
+  </footer>
+
 </body>
 </html>
