@@ -3,64 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBD Mix</title>
+  <title>BBD Mix & Studio Vibes</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      height: 100vh;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
       background-color: #111;
       color: #eee;
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
     }
-    
     h1 {
-      margin: 20px 0;
-      font-size: 2.8rem;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(255, 80, 150, 0.7);
+      margin-bottom: 30px;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00;
     }
-    
-    .image-container {
-      max-width: 90%;
-      max-height: 70vh;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
-      border: 2px solid #333;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .image-card {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      background: #222;
+      padding: 15px;
       border-radius: 12px;
-      overflow: hidden;
-      background: #000;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
     }
-    
+    .image-card h2 {
+      margin: 10px 0;
+      color: #00ccff;
+    }
     img {
-      display: block;
       width: 100%;
       height: auto;
-      object-fit: contain;
+      border-radius: 8px;
+      border: 2px solid #444;
     }
-    
     footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      opacity: 0.7;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
-  <h1>BBD MIX</h1>
-  
-  <div class="image-container">
-    <!-- Replace this src with your actual BBD mix image URL -->
-    <img src="BBD mix.jpg" 
-         alt="BBD Mix Artwork / Cover">
+  <h1>BBD Mix × Studio Energy</h1>
+
+  <div class="container">
+    <div class="image-card">
+      <h2>BBD Mix (WBBD Bootcity! Remix Album Art)</h2>
+      <img src="BBD mix.jpg" 
+           alt="Bell Biv DeVoe WBBD Bootcity The Remix Album cover art">
+    </div>
+
+    <div class="image-card">
+      <h2>Recording Studio Mixing Console</h2>
+      <img src="studio.jpg" 
+           alt="Professional music recording studio mixing desk">
+    </div>
   </div>
 
   <footer>
-    Created for @dilutedscience • February 2026
+    <p>Classic BBD vibes meet that mixing board magic • 1990s New Jack Swing forever</p>
   </footer>
 
 </body>
