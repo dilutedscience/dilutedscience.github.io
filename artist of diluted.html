@@ -6,52 +6,49 @@
   <title>Diluted Science - Artists</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0f0f1a;
       color: #e0e0ff;
+      margin: 0;
+      padding: 0;
     }
     header {
-      background: linear-gradient(to bottom, #1a1a3d, #0d0d1f);
+      background: linear-gradient(to right, #1a1a3d, #2a1a5d);
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 60px 20px;
     }
     h1 {
       margin: 0;
-      font-size: 3.2rem;
-      letter-spacing: 4px;
+      font-size: 3.5em;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: #a78bfa;
-      text-shadow: 0 0 20px rgba(167, 139, 250, 0.6);
     }
-    .subtitle {
-      margin-top: 12px;
-      font-size: 1.3rem;
-      color: #b0b0ff;
+    .tagline {
+      font-size: 1.3em;
+      margin-top: 10px;
       opacity: 0.9;
     }
     .container {
       max-width: 1200px;
-      margin: 0 auto;
-      padding: 40px 20px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     .artists-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px 30px;
+      gap: 30px;
     }
     .artist-card {
-      background: #1a1a2e;
+      background: #1e1e38;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
     .artist-card:hover {
-      transform: translateY(-12px);
-      box-shadow: 0 20px 50px rgba(167, 139, 250, 0.3);
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(100, 80, 200, 0.4);
     }
     .artist-card img {
       width: 100%;
@@ -60,18 +57,17 @@
       display: block;
     }
     .artist-name {
-      padding: 20px 15px;
-      font-size: 1.5rem;
+      padding: 20px;
+      font-size: 1.5em;
       font-weight: bold;
-      color: #c4b5fd;
-      background: linear-gradient(to top, #0f0f1f, transparent);
+      background: #2a2a4a;
     }
     footer {
       text-align: center;
       padding: 30px;
-      font-size: 0.95rem;
-      color: #8888aa;
-      border-top: 1px solid #2a2a4a;
+      background: #0a0a1a;
+      font-size: 0.9em;
+      margin-top: 60px;
     }
   </style>
 </head>
@@ -79,7 +75,7 @@
 
   <header>
     <h1>Diluted Science</h1>
-    <p class="subtitle">Featured Artists</p>
+    <p class="tagline">A collective of visionary artists pushing boundaries in sound, vision, and creativity</p>
   </header>
 
   <div class="container">
@@ -101,12 +97,17 @@
       </div>
 
       <div class="artist-card">
+        <img src="adam.jpg">
+        <div class="artist-name">Adam</div>
+      </div>
+
+      <div class="artist-card">
         <img src="george w.jpg">
         <div class="artist-name">George Winters</div>
       </div>
 
       <div class="artist-card">
-        <img src="Q.jpg">
+        <img src="Q.jpge">
         <div class="artist-name">Q</div>
       </div>
 
@@ -114,7 +115,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Diluted Science • All rights reserved • @dilutedscience</p>
+    <p>&copy; 2026 Diluted Science | Music Production Studio | <a href="mailto:dilutedscience@gmail.com" style="color: #a0a0ff;">dilutedscience@gmail.com</a></p>
   </footer>
 
 </body>
