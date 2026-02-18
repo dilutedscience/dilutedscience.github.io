@@ -3,90 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diluted Science Artists • Andy B</title>
+    <title>Diluted Science - Artists</title>
     <style>
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #0f0f1a;
             color: #e0e0ff;
-            line-height: 1.6;
         }
         header {
-            background: linear-gradient(to bottom, #1a0033, #000033);
+            background: linear-gradient(to right, #1a0033, #330066);
             padding: 60px 20px;
             text-align: center;
-            border-bottom: 4px solid #6600cc;
         }
-        h1 {
+        header h1 {
             margin: 0;
-            font-size: 3.5rem;
-            color: #cc99ff;
-            text-shadow: 0 0 15px rgba(204, 153, 255, 0.7);
+            font-size: 3.5em;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px #aa00ff;
         }
-        .subtitle {
-            font-size: 1.4rem;
-            color: #a0a0ff;
+        header p {
+            font-size: 1.3em;
             margin-top: 10px;
+            opacity: 0.9;
         }
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
         }
-        .artist-section {
-            background: rgba(20, 20, 50, 0.7);
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .artist-card {
+            background: #1e1e38;
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-            border: 1px solid #663399;
-        }
-        .artist-header {
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+            transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
-            margin-bottom: 25px;
         }
-        .artist-name {
-            font-size: 2.8rem;
-            color: #bb99ff;
-            margin: 0;
+        .artist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(170, 0, 255, 0.4);
         }
-        .artist-image-container {
-            text-align: center;
-            margin: 25px 0;
+        .artist-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-bottom: 4px solid #aa00ff;
         }
-        .artist-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0 0 30px rgba(102, 0, 204, 0.5);
-            border: 3px solid #9933ff;
+        .artist-info {
+            padding: 20px;
         }
-        .bio {
-            font-size: 1.15rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+        .artist-info h2 {
+            margin: 10px 0;
+            font-size: 1.8em;
+            color: #cc99ff;
+        }
+        .artist-info p {
+            font-size: 1.1em;
+            opacity: 0.85;
         }
         footer {
-            background: #0a0a1f;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 0.95rem;
-            border-top: 2px solid #440088;
+            padding: 30px;
+            background: #0a0a14;
+            margin-top: 60px;
+            font-size: 0.95em;
+            border-top: 1px solid #333366;
         }
-        a {
-            color: #cc99ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-            color: #ffccff;
-        }
-        @media (max-width: 768px) {
-            h1 { font-size: 2.8rem; }
-            .artist-name { font-size: 2.2rem; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.5em; }
+            .artist-card img { height: 280px; }
         }
     </style>
 </head>
@@ -94,41 +86,39 @@
 
     <header>
         <h1>Diluted Science</h1>
-        <p class="subtitle">Showcasing boundary-pushing artists in music, visuals & experimental creation</p>
+        <p>Showcasing our talented artists • Blending creativity & sound</p>
     </header>
 
     <div class="container">
-
-        <section class="artist-section">
-            <div class="artist-header">
-                <h2 class="artist-name">Andy B</h2>
-                <p style="color: #aa88ff; font-size: 1.3rem; margin: 8px 0;">(Andy B Mixin)</p>
+        <div class="gallery">
+            <div class="artist-card">
+                <img src="BBD.jpg">
+                <div class="artist-info">
+                    <h2>BBD</h2>
+                    <p>Bringing unique vibes and experimental flows to the Diluted Science collective.</p>
+                </div>
             </div>
 
-            <div class="artist-image-container">
-                <!-- Replace this src with the actual image URL of "this andy b image" you want to feature -->
-                <!-- Example placeholder from public sources; update it with your own hosted image link -->
-                <img 
-                    src="andy b.jpg" 
-                    alt="Andy B - Diluted Science featured artist" 
-                    class="artist-image">
+            <div class="artist-card">
+                <img src="andy b.jpg">
+                <div class="artist-info">
+                    <h2>Andy B</h2>
+                    <p>Master of smooth mixes and blissful productions — check out "Life's a Bliss".</p>
+                </div>
             </div>
 
-            <p class="bio">
-                Andy B (Andy B Mixin) a key creative force connected with Diluted Science. 
-                Known for tracks like "Life's a Bliss" and contributions to the Diluted Science sound and aesthetic. 
-                Blending experimental beats, atmospheric production, and unique sonic textures — pushing the edges of what's possible in modern music creation.
-            </p>
-
-            <p class="bio" style="margin-top: 25px;">
-                Available on all major platforms. Follow for the latest drops and visuals.
-            </p>
-        </section>
-
+            <div class="artist-card">
+                <img src="west bird.jpg">
+                <div class="artist-info">
+                    <h2>West Bird</h2>
+                    <p>Capturing raw energy and western-inspired sonic landscapes in every track.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>© 2026 Diluted Science • <a href="https://x.com/dilutedscience">@dilutedscience</a> • Experimental Art & Sound</p>
+        <p>&copy; 2026 Diluted Science • <a href="https://x.com/dilutedscience" style="color: #cc99ff; text-decoration: none;">@dilutedscience</a> • All rights reserved.</p>
     </footer>
 
 </body>
