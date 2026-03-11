@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Diluted Science - Artists</title>
+  <title>Diluted Science Artists</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0f0f1a;
-      color: #e0e0ff;
       margin: 0;
       padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
     }
     header {
-      background: linear-gradient(to right, #1a1a3d, #2a1a5d);
-      text-align: center;
+      background: linear-gradient(to right, #1a1a2e, #16213e);
       padding: 60px 20px;
+      text-align: center;
+      border-bottom: 4px solid #00d4ff;
     }
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 3.5em;
+      font-size: 3.2rem;
       letter-spacing: 3px;
       text-transform: uppercase;
     }
-    .tagline {
-      font-size: 1.3em;
-      margin-top: 10px;
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.3rem;
       opacity: 0.9;
     }
     .container {
@@ -33,22 +34,22 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    .artists-grid {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
     }
     .artist-card {
-      background: #1e1e38;
+      background: #1e1e2e;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
     }
     .artist-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(100, 80, 200, 0.4);
+      box-shadow: 0 15px 35px rgba(0, 212, 255, 0.3);
     }
     .artist-card img {
       width: 100%;
@@ -56,18 +57,19 @@
       object-fit: cover;
       display: block;
     }
-    .artist-name {
-      padding: 20px;
-      font-size: 1.5em;
-      font-weight: bold;
-      background: #2a2a4a;
+    .artist-card h2 {
+      margin: 20px 15px 25px;
+      font-size: 1.6rem;
+      color: #00d4ff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
     footer {
       text-align: center;
       padding: 30px;
-      background: #0a0a1a;
-      font-size: 0.9em;
-      margin-top: 60px;
+      background: #0a0a0a;
+      font-size: 0.95rem;
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -75,47 +77,62 @@
 
   <header>
     <h1>Diluted Science</h1>
-    <p class="tagline">A collective of visionary artists pushing boundaries in sound, vision, and creativity</p>
+    <p>Collective of visionary artists pushing boundaries</p>
   </header>
 
   <div class="container">
-    <div class="artists-grid">
+    <div class="gallery">
 
       <div class="artist-card">
-        <img src="BBD.jpg">
-        <div class="artist-name">BBD</div>
+        <img src="BBD.jpg" alt="BBD">
+        <h2>BBD</h2>
       </div>
 
       <div class="artist-card">
-        <img src="andy b.jpg">
-        <div class="artist-name">Andy B</div>
+        <img src="andy b.jpg" alt="Andy B"> <!-- placeholder portrait-style -->
+        <h2>Andy B</h2>
       </div>
 
       <div class="artist-card">
-        <img src="west bird.jpg">
-        <div class="artist-name">West Bird</div>
+        <img src="west bird.jpg" alt="West Bird">
+        <h2>West Bird</h2>
       </div>
 
       <div class="artist-card">
-        <img src="Adam.png">
-        <div class="artist-name">Adam</div>
+        <img src="Adam.png" alt="Adam">
+        <h2>Adam</h2>
       </div>
 
       <div class="artist-card">
-        <img src="george w.jpg">
-        <div class="artist-name">George Winters</div>
+        <img src="george w.jpg"> <!-- placeholder abstract/art -->
+        <h2>George Winters</h2>
       </div>
 
       <div class="artist-card">
-        <img src="Q.jpg">
-        <div class="artist-name">Q</div>
+        <img src="Q.jpg" alt="Q">
+        <h2>Q</h2>
+      </div>
+
+      <div class="artist-card">
+        <img src="TONE.png" alt="TONE">
+        <h2>TONE</h2>
+      </div>
+
+      <div class="artist-card">
+        <img src="JACK.png" alt="JACK">
+        <h2>JACK</h2>
+      </div>
+
+      <div class="artist-card">
+        <img src="CXLXRADX.jpg" alt="CXLXRADX"> <!-- placeholder futuristic/graphic -->
+        <h2>CXLXRADX</h2>
       </div>
 
     </div>
   </div>
 
   <footer>
-    <p>&copy; 2026 Diluted Science | Music Production Studio | <a href="mailto:dilutedscience@gmail.com" style="color: #a0a0ff;">dilutedscience@gmail.com</a></p>
+    © 2026 Diluted Science • <a href="https://x.com/dilutedscience" style="color: #00d4ff; text-decoration: none;">@dilutedscience</a>
   </footer>
 
 </body>
