@@ -127,31 +127,38 @@
     <p class="subtitle">Late Night Studio Vibes • Lights On • Drop It</p>
   </header>
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Add to Gmail Example</title>
+  <title>Gmail Button Example</title>
+  
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      padding: 40px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
     .gmail-btn {
       display: inline-block;
-      padding: 12px 24px;
-      background: #c5221f;
+      background-color: #c5221f;     /* Gmail red */
       color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 18px 36px;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      transition: background 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      margin: 20px;
     }
+
     .gmail-btn:hover {
-      background: #a81c1a;
+      background-color: #b91c19;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    .gmail-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
   </style>
 </head>
@@ -159,32 +166,24 @@
 
   <h2>Contact me via Gmail</h2>
 
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@example.com&su=Hello%20from%20your%20website&body=Hi%20there%2C%0A%0AI%20found%20your%20contact%20form%20on%20the%20website.%0A%0AHere's%20my%20message%3A%0A%0A%5Btype%20your%20message%20here%5D%0A%0ABest%20regards%2C%0AYour%20Name"
+  <!-- Option 1: Basic large Gmail link -->
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=someone@gmail.com&su=Hello%20from%20your%20website&body=Hi%20there%2C%0A%0AI%20found%20your%20site%20and..." 
      class="gmail-btn" 
-     target="dilutedsciencce@gmail.com" 
+     target="_blank" 
      rel="noopener noreferrer">
-     ✉️ Compose in Gmail
+    ✉️  Email me on Gmail
+  </a>
+
+  <!-- Option 2: Even bigger version -->
+  <br><br>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dilutedscience@gmail.com" 
+     class="gmail-btn" 
+     style="font-size: 32px; padding: 24px 48px;">
+    Compose Message in Gmail →
   </a>
 
 </body>
 </html>
-  
-  <a href="
-  https://mail.google.com/mail/?view=cm&fs=1
-  &todilutedscience@gmail.com
-  &cc
-  &bcc
-  &su
-  &body=Hi%20Support%20Team%2C%0A%0A
-  Product%20name%3A%20%0A
-  Order%20number%3A%20%0A
-  Issue%3A%20%0A%0A
-  Thank%20you%21
-" 
-target="dilutedscience@gmail.com" 
-class="gmail-btn">
-  Open in Gmail
-</a>
   
   <div class="container">
 
