@@ -362,12 +362,62 @@
       <h2>Lets discuss a project</h2>
       <p>Reach out via email at Dilutedscience@gmail.com</p>
       
-      <!-- Gmail button integrated here -->
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dilutedscience@gmail.com" 
-         class="gmail-btn" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        ✉️ Email me on Gmail
+      <!-- === Large Gmail Compose Button === -->
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=dilutedscience@gmail.com"
+   class="large-gmail-button"
+   target="_blank"
+   rel="noopener noreferrer">
+  <span class="icon">✉️</span>
+  Email me on Gmail
+</a>
+
+<style>
+  .large-gmail-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    
+    padding: 16px 36px;
+    font-size: 1.18rem;
+    font-weight: 600;
+    line-height: 1.4;
+    
+    color: white;
+    background: linear-gradient(135deg, #c5221f 0%, #ea4335 100%);
+    border: none;
+    border-radius: 12px;
+    
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    box-shadow: 0 4px 15px rgba(234, 67, 53, 0.35);
+    letter-spacing: 0.3px;
+  }
+
+  .large-gmail-button:hover {
+    background: linear-gradient(135deg, #b91512 0%, #d93025 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(234, 67, 53, 0.5);
+  }
+
+  .large-gmail-button:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 12px rgba(234, 67, 53, 0.4);
+  }
+
+  .large-gmail-button .icon {
+    font-size: 1.45em;
+  }
+
+  /* Optional: make it even bigger on wide screens */
+  @media (min-width: 768px) {
+    .large-gmail-button {
+      padding: 20px 48px;
+      font-size: 1.32rem;
+    }
+  }
+</style>
       </a>
       
       <img 
