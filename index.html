@@ -190,14 +190,74 @@
     </div>
   </div>
 
-  <!-- Neon Social Banner -->
-  <div class="social-banner">
-    <div class="social-icons">
-      <a href="https://facebook.com/dilutedscience" target="_blank" class="social-link" aria-label="Facebook">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127C15.849 3.039 15.005 3 13.935 3c-2.073 0-3.492.633-3.492 3.633v3.334H7.222v3.209h3.221v8.198h2.954z"/>
-        </svg>
-      </a>
-      <a href="https://instagram.com/dilutedscience" target="_blank" class="social-link" aria-label="Instagram">
-        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645
+  /* Social banner (neon green) */
+    .social-banner {
+      background: #000000;
+      padding: 14px 0;
+      text-align: center;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .social-icons {
+      display: inline-flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .social-link {
+      color: #39ff14;
+      font-size: 28px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+      line-height: 1;
+    }
+
+    .social-link:hover,
+    .social-link:focus {
+      color: #7fff00;
+      transform: scale(1.25);
+      filter: drop-shadow(0 0 8px #39ff14) drop-shadow(0 0 15px #39ff14);
+    }
+
+    .social-link:active {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 12px #39ff14) drop-shadow(0 0 25px #39ff14);
+    }
+
+    @media (max-width: 480px) {
+      .social-icons {
+        gap: 20px;
+      }
+      .social-link {
+        font-size: 26px;
+      }
+    }
+
+    /* Gmail button */
+    .gmail-btn {
+      display: inline-block;
+      background-color: #c5221f;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 18px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.2s ease;
+      margin: 20px 0;
+    }
+
+    .gmail-btn:hover {
+      background-color: #b91c19;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    .gmail-btn:active {
+      transform: translateY(1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
