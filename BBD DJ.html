@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BBD DJ - Video Mix</title>
+  <title>BBD DJ - Video Player</title>
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -11,108 +11,114 @@
       color: #e0e0e0;
       margin: 0;
       padding: 20px;
-      text-align: center;
     }
     h1 {
+      text-align: center;
       color: #ff3366;
-      margin-bottom: 10px;
-    }
-    .subtitle {
-      color: #bbb;
       margin-bottom: 30px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .player-box {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
     }
     video {
       width: 100%;
-      max-width: 880px;
-      background: #000;
-      border: 2px solid #333;
+      max-height: 540px;
+      background: black;
       border-radius: 8px;
-      margin: 20px auto;
-      display: block;
     }
     .playlist {
-      max-width: 880px;
-      margin: 0 auto 40px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
     }
     .track-btn {
-      background: #1a1a1a;
-      color: #fff;
-      border: 1px solid #444;
-      padding: 12px 24px;
-      border-radius: 6px;
+      background: #222;
+      border: 2px solid #444;
+      color: white;
+      padding: 16px;
+      border-radius: 10px;
       cursor: pointer;
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       transition: all 0.2s;
-      min-width: 140px;
+      text-align: center;
     }
     .track-btn:hover {
-      background: #333;
+      background: #ff3366;
       border-color: #ff3366;
       transform: translateY(-2px);
     }
     .track-btn.active {
       background: #ff3366;
       border-color: #ff6699;
-      color: white;
-      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255,51,102,0.6);
     }
     footer {
-      margin-top: 60px;
-      color: #555;
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
+<div class="container">
   <h1>BBD DJ</h1>
-  <div class="subtitle">Select a track to play</div>
 
-  <video id="player" controls autoplay muted>
-    <source src="story.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+  <div class="player-box">
+    <video id="videoPlayer" controls autoplay muted>
+      <source src="story.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <div class="playlist">
-    <button class="track-btn active" data-src="story.mp4">story</button>
-    <button class="track-btn" data-src="you.mp4">you</button>
-    <button class="track-btn" data-src="5.mp4">5</button>
-    <button class="track-btn" data-src="DJ.mp4">DJ</button>
-    <button class="track-btn" data-src="nf.mp4">nf</button>
-    <button class="track-btn" data-src="slip.mp4">slip</button>
-    <button class="track-btn" data-src="sul.mp4">sul</button>
-    <button class="track-btn" data-src="war.mp4">war</button>
-    <button class="track-btn" data-src="whoo.mp4">whoo</button>
+    <button class="track-btn active" onclick="playVideo('story.mp4', this)">story.mp4</button>
+    <button class="track-btn" onclick="playVideo('you.mp4', this)">you.mp4</button>
+    <button class="track-btn" onclick="playVideo('5.mp4', this)">5.mp4</button>
+    <button class="track-btn" onclick="playVideo('DJ.mp4', this)">DJ.mp4</button>
+    <button class="track-btn" onclick="playVideo('nf.mp4', this)">nf.mp4</button>
+    <button class="track-btn" onclick="playVideo('slip.mp4', this)">slip.mp4</button>
+    <button class="track-btn" onclick="playVideo('sul.mp4', this)">sul.mp4</button>
+    <button class="track-btn" onclick="playVideo('war.mp4', this)">war.mp4</button>
+    <button class="track-btn" onclick="playVideo('whoo.mp4', this)">whoo.mp4</button>
   </div>
 
   <footer>
-    Place all .mp4 files in the same folder as this HTML file<br>
-    Best viewed in modern browsers • Mobile friendly
+    BBD DJ • Just click a track to play • Videos play in the player above
   </footer>
+</div>
 
-  <script>
-    const player = document.getElementById('player');
-    const buttons = document.querySelectorAll('.track-btn');
+<script>
+  const video = document.getElementById('videoPlayer');
+  let currentButton = document.querySelector('.track-btn.active');
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        // Remove active from all buttons
-        buttons.forEach(b => b.classList.remove('active'));
-        // Add active to clicked button
-        btn.classList.add('active');
+  function playVideo(filename, button) {
+    // Remove active from previous button
+    if (currentButton) {
+      currentButton.classList.remove('active');
+    }
+    
+    // Set new active button
+    button.classList.add('active');
+    currentButton = button;
 
-        const src = btn.getAttribute('data-src');
-        player.src = src;
-        player.play().catch(() => {
-          // Autoplay may be blocked → user will need to click play
-        });
-      });
+    // Change video source and play
+    video.src = filename;
+    video.play().catch(err => {
+      console.log("Autoplay prevented:", err);
+      // Most browsers require user interaction for sound
     });
-  </script>
+  }
+</script>
 
 </body>
 </html>
