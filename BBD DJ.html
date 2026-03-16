@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BBD DJ - Story Video</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0f0f1a;
+      color: #e0e0ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to right, #1a0033, #330066);
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 2px;
+      color: #d0b0ff;
+      text-shadow: 0 0 10px rgba(180, 140, 255, 0.7);
+    }
+    .subtitle {
+      margin: 8px 0 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .video-container {
+      margin: 40px auto;
+      max-width: 960px;
+      width: 92%;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+      border: 1px solid #4a3080;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    footer {
+      margin-top: auto;
+      padding: 30px;
+      text-align: center;
+      font-size: 0.95rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BBD DJ</h1>
+    <div class="subtitle">Bringing the vibe • Story Video</div>
+  </header>
+
+  <div class="video-container">
+    <video controls autoplay muted loop playsinline>
+      <source src="story.mp4" type="video/mp4">
+      <p>Your browser doesn't support HTML5 video.<br>
+         <a href="story.mp4" download>Download the video</a></p>
+    </video>
+  </div>
+
+  <footer>
+    <p>Powered by BBD DJ • 2025–2026</p>
+  </footer>
+
+</body>
+</html>
