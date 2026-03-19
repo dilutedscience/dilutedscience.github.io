@@ -98,29 +98,6 @@ dilutedscience@gmail.com for inquiries</h1>
   </footer>
 </div>
 
-<script>
-  const video = document.getElementById('videoPlayer');
-  let currentButton = document.querySelector('.track-btn.active');
-
-  function playVideo(filename, button) {
-    // Remove active from previous button
-    if (currentButton) {
-      currentButton.classList.remove('active');
-    }
-    
-    // Set new active button
-    button.classList.add('active');
-    currentButton = button;
-
-    // Change video source and play
-    video.src = filename;
-    video.play().catch(err => {
-      console.log("Autoplay prevented:", err);
-      // Most browsers require user interaction for sound
-    });
-  }
-</script>
-
   <!-- Neon Social Banner -->
   <div class="social-banner">
     <div class="social-icons">
@@ -155,5 +132,30 @@ dilutedscience@gmail.com for inquiries</h1>
         </svg>
       </a>
     </div>
+    
+<script>
+  const video = document.getElementById('videoPlayer');
+  let currentButton = document.querySelector('.track-btn.active');
+
+  function playVideo(filename, button) {
+    // Remove active from previous button
+    if (currentButton) {
+      currentButton.classList.remove('active');
+    }
+    
+    // Set new active button
+    button.classList.add('active');
+    currentButton = button;
+
+    // Change video source and play
+    video.src = filename;
+    video.play().catch(err => {
+      console.log("Autoplay prevented:", err);
+      // Most browsers require user interaction for sound
+    });
+  }
+</script>
+
+  
 </body>
 </html>
